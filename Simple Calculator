@@ -1,0 +1,44 @@
+# C# ile 4 işlem yapabilen basit hesap makinesi kodu 
+
+using System;
+
+namespace unity_gun_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            string s1;
+            string s2;
+            string s3;
+            Console.WriteLine("Birinci sayıyı giriniz: ");
+            s1 = Console.ReadLine();
+            Console.WriteLine("İkinci sayıyı giriniz: ");
+            s2 = Console.ReadLine();
+            Console.WriteLine("İşlemi giriniz: ");
+            s3 = Console.ReadLine();
+            int x1 = Convert.ToInt32(s1);
+            int x2 = Convert.ToInt32(s2);
+
+            switch(s3)
+            {
+                case "+":
+                    Console.WriteLine(x1 + x2);
+                    break;
+                case "-":
+                    Console.WriteLine(x1 - x2);
+                    break;
+                case "*":
+                    Console.WriteLine(x1 * x2);
+                    break;
+                case "/":
+                    Console.WriteLine(x1 / x2);
+                    break;
+                default:
+                    Console.WriteLine("İşlemi Bulunamadı.");
+                    break;
+            }
+            Console.ReadKey();
+     }
+}
